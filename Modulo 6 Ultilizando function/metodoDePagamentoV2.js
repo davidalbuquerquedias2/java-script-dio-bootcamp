@@ -27,5 +27,3 @@ else if (formaDePagamento === 3) {
 else {
     console.log(aplicarJuros + (precoEtiqueta, 10));
 }
-
-c

@@ -1,3 +1,5 @@
+// ⚠ DOWHILE MUITO DIFÍCIL SER UTLILIZADO EM ALGUMA APLICAÇÃO.
+
 let contador = 0
 
 do {

@@ -1,1 +1,0 @@
-//Ideias criadas apartir das aulas.

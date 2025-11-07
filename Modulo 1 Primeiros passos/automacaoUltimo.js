@@ -1,1 +1,0 @@
-//Basicamente uma ideia que ele passou sobre que logica do java script se replica em varias outras linguagem só mudando as sintese.

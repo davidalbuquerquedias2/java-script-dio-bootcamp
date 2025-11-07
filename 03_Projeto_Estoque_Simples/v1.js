@@ -1,35 +1,52 @@
-// v2exemplo.js
-const prompt = require("prompt-sync")();
+const prompt = require('prompt-sync')({ sigint: true });
 
-// CRIAÇÃO DO ESTOQUE
-let ESTOQUE = {
-  NOME: "David",
-  IDADE: "19",
-  PRODUTOS: {
-    0: ["MOUSE GAMER", 1990],
-    1: ["TECLADO MECÂNICO", 350],
-    2: ["HEADSET", 250]
-  }
-};
+let estoque = {
 
-// MOSTRA OS ITENS DO ESTOQUE
-function ITENSTOCK(ESTOQUE) {
-  console.log("PRODUTOS NO ESTOQUE:");
-  for (let INDEX in ESTOQUE.PRODUTOS) {
-    let PRODUTO = ESTOQUE.PRODUTOS[INDEX];
-    console.log(INDEX + ": " + PRODUTO[0] + " | R$ " + PRODUTO[1]);
+  nome: "David",
+  idade: "Idade",
+
+  produtos: [
+    { id: 1, nome: "MOUSE Sem Fio", preco: 50.00, },
+    { id: 2, nome: "TECLADO Mecânico", preco: 120.50, },
+    { id: 3, nome: "MONITOR Gamer", preco: 800.00, },
+    { id: 4, nome: "WEBCAM HD", preco: 95.00, }
+  ]
+}
+
+function intemStock(estoque) {
+
+  estoque.nome = prompt("Nome do comprador:  ")
+  estoque.idade = prompt("Idade do comprador:  ")
+
+
+  console.log('\n======================================');
+  console.log('         ESTOQUE ATUAL (Index)         ');
+  console.log('======================================');
+
+  for (const [index, produto] of estoque.produtos.entries()) {
+    const { id, nome, preco } = produto;
+
+    console.log(`${index} Produto é ${nome} valor é ${preco.toFixed(2)} Stock ${id}`)
   }
 }
 
-// MOSTRA O ESTOQUE
-ITENSTOCK(ESTOQUE);
+function Selecionar(estoque) {
 
-// PEDE AO USUÁRIO PARA ESCOLHER UM PRODUTO
-let ESCOLHA = readline.question("Digite o número do produto (0, 1 ou 2): ");
-let PRODUTO = ESTOQUE.PRODUTOS[ESCOLHA];
+  intemStock(estoque)
 
-if (PRODUTO) {
-  console.log("Você escolheu: " + PRODUTO[0] + " | Preço: R$ " + PRODUTO[1]);
-} else {
-  console.log("Produto não encontrado!");
+  const escolha = parseInt(prompt("Digite o produto "))
+  const dadosselecionado = estoque.produtos[escolha]
+
+  const { id, nome, preco } = dadosselecionado;
+
+  console.log('\n======================================');
+  console.log('         Informação (Compra)         ');
+  console.log(`Nome do comprador ${estoque.nome}`)
+  console.log(`Idade do comprador ${estoque.idade}`)
+  console.log(`O produto Se encontra no stock ${id}`)
+  console.log(`Produto ${nome} preço ${preco.toFixed}(2)`)
+  console.log('======================================') 
+
 }
+
+Selecionar(estoque)

@@ -5,7 +5,7 @@ console.log(notificacao + " tem novo pokemon na região ")
 console.log(notificacao +   "você foi derrotado por um lider ")
 
 
-
+__________________________________________________
 
 let poteCafe = "café pilão"
 let poteAcucar = "Açucar cristal"
@@ -19,7 +19,7 @@ poteCafe = "Cafe 3 coração"
 console.log(mensagemDaVovo + poteCafe + " - " + poteAcucar + " - " + poteBiscoito)
 
 
-
+__________________________________________________
 //Pokemon 
 
 let nomePokemon = "pikachu"
@@ -34,7 +34,7 @@ let selecionavel = true
 
 
 
-
+__________________________________________________
 
 // nome, idade, numero de telefone, cpf, endereço, recebePensao
 // string = amazenar textos 
@@ -47,3 +47,6 @@ let numeroTelefone =  "51-1108398932"
 let cpf = "052.312.323.24"
 let endereco = "Rua tiro bango tudo bagos"
 let recebePensao = true 
+
+
+__________________________________________________

@@ -6,7 +6,6 @@
 
 // -------------------------------------------------------
 // EXEMPLO 1: LOOP FOR
-// Mais comum para quando se sabe o número de repetições
 // -------------------------------------------------------
 console.log("--- Loop FOR ---");
 
@@ -16,11 +15,9 @@ for (let contador = 0; contador <= 4; contador++) {
     console.log("Aumentando o contador ");
 }
 
-// FOR usando 'i' (padrão de mercado para índice)
+// FOR usando 'i' (padrão de índice)
 for (let i = 0; i < 4; i++) {
-    // Nota: O 'contador' aqui precisa ser uma variável diferente ou declarada
-    // Se você usa 'contador' aqui, ele pode gerar 'ReferenceError' se não for declarado.
-    // Usaremos 'i' para seguir a prática de mercado.
+    // Nota: O 'contador' foi substituído por 'i' para evitar redeclaração e seguir a prática de mercado.
     console.log(i); 
     console.log("Aumentando o contador (usando 'i') ");
 }
@@ -29,7 +26,6 @@ console.log("\n------------------------------");
 
 // -------------------------------------------------------
 // EXEMPLO 2: LOOP WHILE
-// Comum para quando a condição de parada é incerta
 // -------------------------------------------------------
 console.log("--- Loop WHILE ---");
 
@@ -49,11 +45,9 @@ console.log("\n------------------------------");
 
 // -------------------------------------------------------
 // EXEMPLO 3: LOOP DO/WHILE
-// Garante que o bloco de código execute pelo menos uma vez
+// Executa o bloco antes de verificar a condição.
 // -------------------------------------------------------
 console.log("--- Loop DOWHILE ---");
-
-// ⚠ Nota do seu código: O DOWHILE é pouco usado, mas útil quando a ação deve ocorrer antes do teste da condição.
 
 let contadorDoWhile = 0;
 
